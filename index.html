@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrintCare — Manutenção preventiva de impressoras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"><i class="c"></i><i class="m"></i><i class="y"></i><i class="k"></i></span>
+      <div>
+        <strong>PrintCare</strong>
+        <small>Manutenção preventiva</small>
+      </div>
+    </div>
+    <nav id="menu">
+      <a href="#/" data-rota="">Visão geral</a>
+      <a href="#/equipamentos" data-rota="equipamentos">Equipamentos</a>
+      <a href="#/componentes" data-rota="componentes">Saúde dos componentes</a>
+      <a href="#/alertas" data-rota="alertas">Alertas <span class="pill" id="badge-alertas"></span></a>
+      <a href="#/ordens" data-rota="ordens">Ordens de serviço</a>
+      <a href="#/assistente" data-rota="assistente">Assistente de diagnóstico</a>
+      <a href="#/relatorios" data-rota="relatorios">Histórico e relatórios</a>
+      <a href="#/sobre" data-rota="sobre">Sobre</a>
+    </nav>
+    <div class="sidebar-foot" id="org"></div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div>
+        <h1 id="titulo">Visão geral</h1>
+        <p id="subtitulo" class="muted"></p>
+      </div>
+      <div class="topbar-actions">
+        <span class="muted" id="data-hoje"></span>
+        <button class="btn" id="btn-coletar" title="Simula uma coleta SNMP das impressoras de rede">Coletar agora (simulação SNMP)</button>
+      </div>
+    </header>
+    <section id="conteudo"></section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="engine.js"></script>
+  <script src="seed.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
